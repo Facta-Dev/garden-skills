@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   ".claude/settings.json": {
-    "mtime": 1795368534.7271907,
-    "ast_hash": "42c6267c370d3b09169b7ce31efce184",
+    "mtime": 1795371743.793959,
+    "ast_hash": "44091d9ee85df822b39ee4c783e584a1",
     "semantic_hash": ""
   },
   "demo/web-design-demo/demo2/script.js": {
@@ -1790,8 +1790,8 @@
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1795368534.726853,
-    "ast_hash": "82efb97a359f5c7290bf2513d14686be",
+    "mtime": 1795370994.6267257,
+    "ast_hash": "9966d6dc412037aa92f0a6ef945d42f8",
     "semantic_hash": ""
   },
   "CONTRIBUTING.ja-JP.md": {
@@ -3207,6 +3207,21 @@
   "website/web-design-website/public/video.mp4": {
     "mtime": 1794269700.532403,
     "ast_hash": "6a007c55b816099ddf23587776806437",
+    "semantic_hash": ""
+  },
+  ".claude/README.md": {
+    "mtime": 1795370994.6344287,
+    "ast_hash": "4fbaf09d5b6a4d5c365e8586336877db",
+    "semantic_hash": ""
+  },
+  ".claude/rules/memory-ops.md": {
+    "mtime": 1795372862.217749,
+    "ast_hash": "18b2f668ad98bbaee7944dbb06501ab8",
+    "semantic_hash": ""
+  },
+  "scripts/hooks/knowledge-sync.sh": {
+    "mtime": 1795371355.8089566,
+    "ast_hash": "9ca00e28188fb9c5572dc760186d988a",
     "semantic_hash": ""
   }
 }

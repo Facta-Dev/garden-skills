@@ -222,7 +222,7 @@
   "220": "Hero.tsx",
   "221": "Source → Markdown",
   "222": "Excel 数据分析",
-  "223": "frames.mjs",
+  "223": "ffOut",
   "224": "INDEX.md",
   "225": "Anchor: hook-chapter（钩子型开场）",
   "226": "extract-narrations.ts",
@@ -357,5 +357,6 @@
   "355": "vite.config.ts",
   "356": "eslint.config.js",
   "357": "eslint.config.js",
-  "358": "vite.config.ts"
+  "358": "vite.config.ts",
+  "359": "knowledge-sync.sh"
 }

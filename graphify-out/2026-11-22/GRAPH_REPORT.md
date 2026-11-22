@@ -1,15 +1,16 @@
-# Graph Report - .  (2026-11-22)
+# Graph Report - garden-skills  (2026-11-22)
 
 ## Corpus Check
-- cluster-only mode — file stats not available
+- 623 files · ~446,914 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 4680 nodes · 5927 edges · 359 communities (332 shown, 27 thin omitted)
+- 4682 nodes · 5928 edges · 360 communities (332 shown, 28 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 153 edges (avg confidence: 0.56)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `fbd0a5f9`
+- Built from commit: `b9337366`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -365,6 +366,7 @@
 - scaffold.sh
 - setup.sh
 - synthesize-audio.sh
+- knowledge-sync.sh
 
 ## God Nodes (most connected - your core abstractions)
 1. `N()` - 41 edges
@@ -393,7 +395,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (359 total, 27 thin omitted)
+## Communities (360 total, 28 thin omitted)
 
 ### Community 0 - "synth.mjs"
 Cohesion: 0.13
@@ -1276,7 +1278,7 @@ Cohesion: 0.18
 Nodes (10): 1. MarkItDown 主路径, 2. 轻量 fallback, 3. Agent 决策规则, Source → Markdown, Source Phase 自检（主 Agent 内联 · 5 条 checklist）, 不同输入的处理原则, 产物, 升级为独立 Source Reviewer（仅限复杂/低置信源） (+2 more)
 
 ### Community 222 - "Excel 数据分析"
-Cohesion: 0.18
+Cohesion: 0.20
 Nodes (10): Excel 数据分析, 分组聚合（GroupBy）, 快速参考, 排序, 数据合并, 数据清洗, 数据过滤, 数据透视表 (+2 more)
 
 ### Community 223 - "ffOut"
@@ -1440,7 +1442,7 @@ Cohesion: 0.25
 Nodes (8): 1. 建立一级分类目录, 2. 迁移现有直播模板, 3. 更新 `SKILL.md`, 4. 清理旧路径引用, 任务拆解, 十四、Phase 1：references 目录树重构, 目标, 阶段完成标准
 
 ### Community 263 - "Excel 文件读取"
-Cohesion: 0.25
+Cohesion: 0.29
 Nodes (7): Excel 文件读取, 处理大文件, 快速入门, 性能优化选项, 读取单个工作表, 读取整个工作簿的所有工作表, 读取特定列
 
 ### Community 264 - "lerp"
@@ -1692,21 +1694,21 @@ Cohesion: 0.50
 Nodes (3): Expanding the ESLint configuration, React Compiler, React + TypeScript + Vite
 
 ## Knowledge Gaps
-- **3108 isolated node(s):** `nav`, `burger`, `chips`, `cards`, `revealTargets` (+3103 more)
+- **3109 isolated node(s):** `knowledge-sync.sh script`, `nav`, `burger`, `chips`, `cards` (+3104 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **27 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **28 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `GPT Image 2` connect `模板索引` to `README.md`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Why does `Web Video Presentation` connect `Web Video Presentation` to `CHAPTER-CRAFT.md`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **Why does `Garden Skills` connect `Garden Skills` to `README.md`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
-- **What connects `nav`, `burger`, `chips` to the rest of the system?**
-  _3109 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `一笔线描（one-line）` connect `一笔线描（one-line）` to `README.md`?**
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+- **What connects `knowledge-sync.sh script`, `nav`, `burger` to the rest of the system?**
+  _3110 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `synth.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.1278538812785388 - nodes in this community are weakly interconnected._
 - **Should `editor.js` be split into smaller, more focused modules?**

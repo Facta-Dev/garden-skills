@@ -1,15 +1,16 @@
-# Graph Report - .  (2026-11-22)
+# Graph Report - garden-skills  (2026-11-22)
 
 ## Corpus Check
-- cluster-only mode — file stats not available
+- 623 files · ~446,984 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 4680 nodes · 5927 edges · 359 communities (332 shown, 27 thin omitted)
+- 4684 nodes · 5929 edges · 360 communities (331 shown, 29 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 153 edges (avg confidence: 0.56)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `fbd0a5f9`
+- Built from commit: `b1412d5e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -365,6 +366,7 @@
 - scaffold.sh
 - setup.sh
 - synthesize-audio.sh
+- knowledge-sync.sh
 
 ## God Nodes (most connected - your core abstractions)
 1. `N()` - 41 edges
@@ -393,11 +395,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (359 total, 27 thin omitted)
+## Communities (360 total, 29 thin omitted)
 
 ### Community 0 - "synth.mjs"
 Cohesion: 0.13
-Nodes (72): addInto(), adsr(), ambience(), bandpass(), bass(), bell(), biq(), biquad() (+64 more)
+Nodes (70): addInto(), adsr(), ambience(), bandpass(), bass(), bell(), biquad(), blip() (+62 more)
 
 ### Community 1 - "editor.js"
 Cohesion: 0.09
@@ -408,8 +410,8 @@ Cohesion: 0.07
 Nodes (50): audio(), characters(), chooseOccurrence(), fail(), interval(), narrationClock(), occurrences(), assertAudio() (+42 more)
 
 ### Community 3 - "editor.mjs"
-Cohesion: 0.10
-Nodes (45): ASSETS, body(), createEditorServer(), MIME, send(), serveFile(), exportEditor(), newJob() (+37 more)
+Cohesion: 0.11
+Nodes (43): ASSETS, body(), createEditorServer(), MIME, send(), serveFile(), exportEditor(), newJob() (+35 more)
 
 ### Community 4 - "App.tsx"
 Cohesion: 0.06
@@ -437,7 +439,7 @@ Nodes (32): Bento without rhythm, Cardification, Contents, Contextual Failure Pa
 
 ### Community 10 - "inspect.mjs"
 Cohesion: 0.13
-Nodes (34): check(), classifyFreezes(), CMDS, detect(), grid(), hasDrawtext, heat(), info (+26 more)
+Nodes (28): CMDS, ffOut(), frames(), grid(), hasDrawtext, info, inRange(), loop() (+20 more)
 
 ### Community 11 - "devDependencies"
 Cohesion: 0.06
@@ -448,7 +450,7 @@ Cohesion: 0.11
 Nodes (19): bezier(), camera3d(), clamp(), dot3(), ease, fromOklab(), gam(), glide (+11 more)
 
 ### Community 13 - "die"
-Cohesion: 0.17
+Cohesion: 0.16
 Nodes (23): analyseAudio(), beats(), build(), buildTone(), cmds, librosaBeats(), loudness(), measureLoudness() (+15 more)
 
 ### Community 14 - "B 站风格的 8 条原则（形式层面）"
@@ -509,7 +511,7 @@ Nodes (21): dependencies, react, react-dom, reacticle, devDependencies, @types/r
 
 ### Community 28 - "render.mjs"
 Cohesion: 0.17
-Nodes (21): openPage(), warnSoftwareGL(), textHook(), cleanups, contactSheet(), determinism(), directions(), fail() (+13 more)
+Nodes (20): openPage(), warnSoftwareGL(), textHook(), cleanups, contactSheet(), determinism(), directions(), fail() (+12 more)
 
 ### Community 29 - "Common Issues — Top 10 Catalog"
 Cohesion: 0.09
@@ -944,8 +946,8 @@ Cohesion: 0.15
 Nodes (12): 4 格漫画模板, 主模板：2×2 反转 4 格漫画, 何时使用, 参数策略, 变体 1：讽刺产品广告 4 格, 变体 2：1×4 横向 strip（适合 Twitter / X 长帖）, 变体 3：美食 / 心情日记 4 格, 变体 4：自动补全模式 (+4 more)
 
 ### Community 139 - "browser.mjs"
-Cohesion: 0.23
-Nodes (10): args, MIME, parseSize(), resolveTarget(), SCRIPTS_DIR, AUDIO_TYPES, createPreviewServer(), STARTER (+2 more)
+Cohesion: 0.13
+Nodes (18): ffv, here, toneOk, args, launch(), loadChromium(), MIME, parseSize() (+10 more)
 
 ### Community 140 - "design-directions.md"
 Cohesion: 0.23
@@ -1280,8 +1282,8 @@ Cohesion: 0.18
 Nodes (10): Excel 数据分析, 分组聚合（GroupBy）, 快速参考, 排序, 数据合并, 数据清洗, 数据过滤, 数据透视表 (+2 more)
 
 ### Community 223 - "ffOut"
-Cohesion: 0.50
-Nodes (5): ffOut(), frames(), inRange(), strip(), stripTile()
+Cohesion: 0.39
+Nodes (11): check(), classifyFreezes(), detect(), heat(), motion(), motionReport(), qa(), findTimeline() (+3 more)
 
 ### Community 224 - "INDEX.md"
 Cohesion: 0.25
@@ -1555,10 +1557,6 @@ Nodes (5): Density 与 Theme 解耦, 主题选择, 主题选择自检, 新增主
 Cohesion: 0.33
 Nodes (6): 导出与兼容, 工作区布局, 打开已有项目, 第一版支持的操作, 音轨从哪里来, 默认剪辑工作区
 
-### Community 292 - "check-env.mjs"
-Cohesion: 0.33
-Nodes (3): ffv, here, toneOk
-
 ### Community 293 - "10. Storyboards & Sequences（叙事性序列）"
 Cohesion: 0.33
 Nodes (6): 10.1 4 格漫画, 10.2 漫画跨页, 10.3 动漫主视觉, 10.4 角色关系图, 10.5 食谱 / 流程步骤图, 10. Storyboards & Sequences（叙事性序列）
@@ -1692,24 +1690,24 @@ Cohesion: 0.50
 Nodes (3): Expanding the ESLint configuration, React Compiler, React + TypeScript + Vite
 
 ## Knowledge Gaps
-- **3108 isolated node(s):** `nav`, `burger`, `chips`, `cards`, `revealTargets` (+3103 more)
+- **3110 isolated node(s):** `Memory-first: codegraph / graphify / repo memories before grep`, `knowledge-sync.sh script`, `nav`, `burger`, `chips` (+3105 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **27 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **29 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `GPT Image 2` connect `模板索引` to `README.md`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
-- **Why does `Web Video Presentation` connect `Web Video Presentation` to `CHAPTER-CRAFT.md`?**
+- **Why does `GPT Image 2 Skill` connect `GPT Image 2 Skill` to `README.md`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **Why does `Garden Skills` connect `Garden Skills` to `README.md`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
-- **What connects `nav`, `burger`, `chips` to the rest of the system?**
-  _3109 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `Memory-first: codegraph / graphify / repo memories before grep`, `knowledge-sync.sh script`, `nav` to the rest of the system?**
+  _3111 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `synth.mjs` be split into smaller, more focused modules?**
-  _Cohesion score 0.1278538812785388 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.13319919517102616 - nodes in this community are weakly interconnected._
 - **Should `editor.js` be split into smaller, more focused modules?**
   _Cohesion score 0.08893360160965795 - nodes in this community are weakly interconnected._
 - **Should `narration.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.07203751065643649 - nodes in this community are weakly interconnected._
+- **Should `editor.mjs` be split into smaller, more focused modules?**
+  _Cohesion score 0.10790960451977401 - nodes in this community are weakly interconnected._
