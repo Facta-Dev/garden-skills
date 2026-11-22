@@ -32,3 +32,9 @@ garden-gpt-image-2/
 temp/
 # motion-showreel downloaded sample packs
 skills/motion-showreel/scripts/samples/
+CLAUDE.local.md
+.claude/settings.local.json
+.claude/install-state.json
+.claude/backups/
+.claude/logs/
+.codegraph/
